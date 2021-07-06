@@ -1,14 +1,17 @@
 import React from 'react';
 import {Link, graphql} from 'gatsby';
 import styled from "styled-components";
+import Greetings from "../components/Greetings";
 
 
 export default function About({data}) {
-
     return (
         <React.Fragment>
             <div>
                 <H1>About <span>this app</span></H1>
+                <div id="greetings">
+                    <Greetings name="Jaied" />
+                </div>
                 <div id="details">
                     <p>Site title: {data.site.siteMetadata.title}</p>
                     <p>Site description: {data.site.siteMetadata.description}</p>

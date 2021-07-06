@@ -17,6 +17,8 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.13.1",
     "gatsby": "^3.8.1",
+    "gatsby-plugin-image": "^1.8.0",
+    "gatsby-plugin-sharp": "^3.8.0",
     "gatsby-plugin-styled-components": "^4.8.0",
     "gatsby-source-filesystem": "^3.8.0",
     "react": "^17.0.1",
