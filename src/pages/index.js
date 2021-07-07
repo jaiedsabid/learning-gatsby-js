@@ -14,7 +14,6 @@ const IndexPage = ({data}) => {
                     <p>Turn your ideas into a perfect web application.</p>
                     <Link className={styles.btn} to="/projects">My Portfolio Projects</Link>
                 </div>
-
                 <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="Banner"/>
             </section>
         </Layout>
@@ -25,7 +24,7 @@ export const data = graphql`
 query Banner {
   file(relativePath: {eq: "banner.png"}) {
     childImageSharp {
-      gatsbyImageData(formats: AUTO)
+      gatsbyImageData(formats: AUTO, quality: 50)
     }
   }
 }
