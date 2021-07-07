@@ -1,9 +1,10 @@
 import * as React from 'react';
-import {Link} from 'gatsby';
+import {graphql, Link} from 'gatsby';
 import Layout from "../components/Layout";
 import * as styles from '../styles/home.module.css';
+import {GatsbyImage, getSrcSet} from "gatsby-plugin-image";
 
-const IndexPage = () => {
+const IndexPage = ({data}) => {
     return (
         <Layout>
             <section className={styles.header}>
@@ -13,11 +14,21 @@ const IndexPage = () => {
                     <p>Turn your ideas into a perfect web application.</p>
                     <Link className={styles.btn} to="/projects">My Portfolio Projects</Link>
                 </div>
-                <img src="/banner.png" alt="Banner" style={{maxWidth: "100%"}}/>
+
+                <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="Banner"/>
             </section>
         </Layout>
     )
 }
 
+export const data = graphql`
+query Banner {
+  file(relativePath: {eq: "banner.png"}) {
+    childImageSharp {
+      gatsbyImageData(formats: AUTO)
+    }
+  }
+}
+`;
 
 export default IndexPage;
