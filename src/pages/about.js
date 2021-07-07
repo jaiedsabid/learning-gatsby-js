@@ -1,52 +1,15 @@
 import React from 'react';
-import {Link, graphql} from 'gatsby';
-import styled from "styled-components";
-import Greetings from "../components/Greetings";
+import Layout from "../components/Layout";
 
-
-export default function About({data}) {
+export default function About() {
     return (
-        <React.Fragment>
+        <Layout>
             <div>
-                <H1>About <span>this app</span></H1>
-                <div id="greetings">
-                    <Greetings name="Jaied" />
-                </div>
-                <div id="details">
-                    <p>Site title: {data.site.siteMetadata.title}</p>
-                    <p>Site description: {data.site.siteMetadata.description}</p>
-                    <p>Site author: {data.site.siteMetadata.author}</p>
-                </div>
-                <p>
-                    <Link to="/">Back to <b>Home</b></Link>
-                </p>
+                <h1>About page</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis ipsum corrupti nostrum iure ipsam, unde eveniet temporibus eaque distinctio porro, accusamus, cum officia! Numquam, quam dolores praesentium quae sapiente tenetur minima officia reprehenderit cupiditate minus ad animi, sit, cumque omnis earum totam sint maxime? Eveniet voluptatum officiis minus, debitis consectetur voluptas numquam animi magni sequi corporis ipsum odio voluptatibus nulla tempora, sunt aliquid? Ea qui recusandae eius nostrum dolorum saepe laboriosam dolorem molestiae, blanditiis expedita odit obcaecati, amet quia deserunt! Repellat at suscipit expedita vel nam, odit molestiae quo pariatur quod alias, explicabo quibusdam nostrum illo eum fugiat iusto corporis doloremque tempore! Eum molestias fuga dolor praesentium vitae, quaerat doloribus, aspernatur quas fugiat illo voluptate reiciendis amet aperiam ratione vero? A expedita, recusandae laboriosam deserunt aperiam nostrum, temporibus corrupti hic vero atque numquam nobis sed, magnam id ipsa quis animi quos pariatur alias quae! Accusamus labore non incidunt quasi debitis perspiciatis fugiat, excepturi exercitationem perferendis quas similique culpa impedit natus facilis hic dicta dolorum qui quis molestiae? Aperiam non delectus reprehenderit modi ipsa, necessitatibus fugit consequuntur maiores neque nihil velit provident, voluptates eius soluta accusamus ipsum harum id architecto sapiente, nemo ad rerum expedita? Quasi dolore dolores id omnis a.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis ipsum corrupti nostrum iure ipsam, unde eveniet temporibus eaque distinctio porro, accusamus, cum officia! Numquam, quam dolores praesentium quae sapiente tenetur minima officia reprehenderit cupiditate minus ad animi, sit, cumque omnis earum totam sint maxime? Eveniet voluptatum officiis minus, debitis consectetur voluptas numquam animi magni sequi corporis ipsum odio voluptatibus nulla tempora, sunt aliquid? Ea qui recusandae eius nostrum dolorum saepe laboriosam dolorem molestiae, blanditiis expedita odit obcaecati, amet quia deserunt! Repellat at suscipit expedita vel nam, odit molestiae quo pariatur quod alias, explicabo quibusdam nostrum illo eum fugiat iusto corporis doloremque tempore! Eum molestias fuga dolor praesentium vitae, quaerat doloribus, aspernatur quas fugiat illo voluptate reiciendis amet aperiam ratione vero? A expedita, recusandae laboriosam deserunt aperiam nostrum, temporibus corrupti hic vero atque numquam nobis sed, magnam id ipsa quis animi quos pariatur alias quae! Accusamus labore non incidunt quasi debitis perspiciatis fugiat, excepturi exercitationem perferendis quas similique culpa impedit natus facilis hic dicta dolorum qui quis molestiae? Aperiam non delectus reprehenderit modi ipsa, necessitatibus fugit consequuntur maiores neque nihil velit provident, voluptates eius soluta accusamus ipsum harum id architecto sapiente, nemo ad rerum expedita? Quasi dolore dolores id omnis a.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis ipsum corrupti nostrum iure ipsam, unde eveniet temporibus eaque distinctio porro, accusamus, cum officia! Numquam, quam dolores praesentium quae sapiente tenetur minima officia reprehenderit cupiditate minus ad animi, sit, cumque omnis earum totam sint maxime? Eveniet voluptatum officiis minus, debitis consectetur voluptas numquam animi magni sequi corporis ipsum odio voluptatibus nulla tempora, sunt aliquid? Ea qui recusandae eius nostrum dolorum saepe laboriosam dolorem molestiae, blanditiis expedita odit obcaecati, amet quia deserunt! Repellat at suscipit expedita vel nam, odit molestiae quo pariatur quod alias, explicabo quibusdam nostrum illo eum fugiat iusto corporis doloremque tempore! Eum molestias fuga dolor praesentium vitae, quaerat doloribus, aspernatur quas fugiat illo voluptate reiciendis amet aperiam ratione vero? A expedita, recusandae laboriosam deserunt aperiam nostrum, temporibus corrupti hic vero atque numquam nobis sed, magnam id ipsa quis animi quos pariatur alias quae! Accusamus labore non incidunt quasi debitis perspiciatis fugiat, excepturi exercitationem perferendis quas similique culpa impedit natus facilis hic dicta dolorum qui quis molestiae? Aperiam non delectus reprehenderit modi ipsa, necessitatibus fugit consequuntur maiores neque nihil velit provident, voluptates eius soluta accusamus ipsum harum id architecto sapiente, nemo ad rerum expedita? Quasi dolore dolores id omnis a.</p>
             </div>
-        </React.Fragment>
+        </Layout>
     );
 }
-
-export const query = graphql `
-    query{
-        site {
-            siteMetadata {
-                title
-                description
-                author
-            }
-        }
-    }
-`;
-
-const H1 = styled.h1`
-  color: #262626;
-  font-size: 3rem;
-
-  & span {
-    color: darkblue;
-
-    & :hover {
-      color: tomato;
-      transition: color 0.3s ease;
-    }
-  }
-`;

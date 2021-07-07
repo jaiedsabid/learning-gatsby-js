@@ -1,19 +1,23 @@
 import * as React from 'react';
 import {Link} from 'gatsby';
-import {StaticImage} from 'gatsby-plugin-image'
+import Layout from "../components/Layout";
+import * as styles from '../styles/home.module.css';
 
 const IndexPage = () => {
     return (
-        <main>
-            <title>Home Page</title>
-            <h1>Welcome to my Gatsby site!</h1>
-            <StaticImage
-                alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
-                src="https://pbs.twimg.com/media/E1oMV3QVgAIr1NT?format=jpg&name=large"
-            />
-            <Link to="/about">About</Link>
-            <p>I'm making this by following the Gatsby Tutorial.</p>
-        </main>
+        <Layout>
+            <section className={styles.header}>
+                <div>
+                    <h2>Design</h2>
+                    <h3>Develop & Deploy</h3>
+                    <p>Turn your ideas into a perfect web application.</p>
+                    <Link className={styles.btn} to="/projects">My Portfolio Projects</Link>
+                </div>
+                <img src="/banner.png" alt="Banner" style={{maxWidth: "100%"}}/>
+            </section>
+        </Layout>
     )
 }
+
+
 export default IndexPage;
