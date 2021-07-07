@@ -2,7 +2,7 @@ import * as React from 'react';
 import {graphql, Link} from 'gatsby';
 import Layout from "../components/Layout";
 import * as styles from '../styles/home.module.css';
-import {GatsbyImage, getSrcSet} from "gatsby-plugin-image";
+import {GatsbyImage} from "gatsby-plugin-image";
 
 const IndexPage = ({data}) => {
     return (
