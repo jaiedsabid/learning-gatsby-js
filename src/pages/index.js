@@ -6,7 +6,7 @@ import {GatsbyImage} from "gatsby-plugin-image";
 
 const IndexPage = ({data}) => {
     return (
-        <Layout>
+        <Layout title="Home">
             <section className={styles.header}>
                 <div>
                     <h2>Design</h2>

@@ -8,7 +8,7 @@ function ProjectDetails({data}) {
     const {html} = data.markdownRemark;
     const {title, stack, featuredImg} = data.markdownRemark.frontmatter;
     return (
-        <Layout>
+        <Layout title={title}>
             <div className={styles.details}>
                 <h2>{title}</h2>
                 <h3>{stack}</h3>
